@@ -1,0 +1,27 @@
+.border-bottom {
+    padding-block-end: $space-0;
+    border-block-end: r(2.5) solid transparent;
+    font-weight: $font-weight-medium;
+    transition: border-color $transition-duration-default;
+
+    @include has-hover {
+        border-color: $color-border-regular;
+    }
+
+    &.nuxt-link-exact-active {
+        border-color: $color-border-regular;
+    }
+}
+
+.dark-mode body {
+
+    .border-bottom {
+        @include has-hover {
+            border-color: $color-border-darker;
+        }
+
+        &.nuxt-link-exact-active {
+            border-color: $color-border-darker;
+        }
+    }
+}

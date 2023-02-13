@@ -1,0 +1,10 @@
+.page-enter-active,
+.page-leave-active {
+    transition: all $transition-duration-slow;
+}
+
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
+    filter: blur(r(2px));
+}
