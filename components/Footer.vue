@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 const contactLinks: string[] = [
-    'https://linkedin.com/in/ngoc-long-nguyen-0aa4bb243',
+    'https://linkedin.com/in/ngoc-long-nguyen',
     'mailto:22nlongn@gmail.com',
     'https://github.com/nlongn22',
 ];
