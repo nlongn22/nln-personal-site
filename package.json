@@ -22,6 +22,7 @@
     "vite-plugin-stylelint": "^4.2.0"
   },
   "dependencies": {
+    "@funken-studio/sitemap-nuxt-3": "^4.0.4",
     "postcss-html": "^1.5.0",
     "stylelint-config-recommended-scss": "^9.0.0",
     "stylelint-config-recommended-vue": "^1.4.0"

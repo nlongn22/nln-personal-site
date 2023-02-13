@@ -80,6 +80,7 @@ export default defineNuxtConfig({
     modules: [
         'nuxt-font-loader',
         '@nuxtjs/color-mode',
+        '@funken-studio/sitemap-nuxt-3',
     ],
     fontLoader: {
         local: [
