@@ -84,27 +84,27 @@ export default defineNuxtConfig({
     fontLoader: {
         local: [
             {
-                src: 'assets/fonts/Poppins-Light.ttf',
+                src: '/fonts/Poppins-Light.ttf',
                 family: 'Poppins',
                 weight: '300',
             },
             {
-                src: 'assets/fonts/Poppins-Regular.ttf',
+                src: '/fonts/Poppins-Regular.ttf',
                 family: 'Poppins',
                 weight: '400',
             },
             {
-                src: 'assets/fonts/Poppins-Medium.ttf',
+                src: '/fonts/Poppins-Medium.ttf',
                 family: 'Poppins',
                 weight: '500',
             },
             {
-                src: 'assets/fonts/Poppins-SemiBold.ttf',
+                src: '/fonts/Poppins-SemiBold.ttf',
                 family: 'Poppins',
                 weight: '600',
             },
             {
-                src: 'assets/fonts/Poppins-Bold.ttf',
+                src: '/fonts/Poppins-Bold.ttf',
                 family: 'Poppins',
                 weight: '700',
             },
