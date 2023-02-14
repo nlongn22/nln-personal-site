@@ -13,7 +13,7 @@
 
         <section>
             <Icon
-                :key="iconKey"
+                :key="index"
                 :name="colorMode.preference"
                 class="navbar__theme-switcher"
                 @click="changeTheme"
@@ -44,18 +44,11 @@ const links: ILinks[] = [
 ];
 const colorMode = useColorMode();
 const themes = ['system', 'dark', 'light'];
-const iconKey = ref(0);
-let index: number = 0;
-
-function rerenderIcon(): void {
-    iconKey.value++;
-}
+const index = ref(0);
 
 function changeTheme(): void {
-    rerenderIcon();
-
-    index === 2 ? index = 0 : index++;
-    colorMode.preference = themes[index];
+    index.value === 2 ? index.value = 0 : index.value++;
+    colorMode.preference = themes[index.value];
 
     setTimeout(() => {
         changeMetaTheme();
@@ -74,7 +67,6 @@ function listenToThemeChange(): void {
 }
 
 onMounted(() => {
-    rerenderIcon();
     listenToThemeChange();
     changeMetaTheme();
 });
