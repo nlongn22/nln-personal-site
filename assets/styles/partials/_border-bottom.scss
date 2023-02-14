@@ -13,15 +13,12 @@
     }
 }
 
-.dark-mode body {
+.dark-mode .border-bottom {
+    @include has-hover {
+        border-color: $color-border-darker;
+    }
 
-    .border-bottom {
-        @include has-hover {
-            border-color: $color-border-darker;
-        }
-
-        &.router-link-exact-active {
-            border-color: $color-border-darker;
-        }
+    &.router-link-exact-active {
+        border-color: $color-border-darker;
     }
 }

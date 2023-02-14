@@ -16,19 +16,19 @@
 </template>
 
 <script setup lang="ts">
-const contactLinks: string[] = [
+const contactLinks = [
     'https://linkedin.com/in/ngoc-long-nguyen',
     'mailto:22nlongn@gmail.com',
     'https://github.com/nlongn22',
 ];
 
-const contactTitles: string[] = [
+const contactTitles = [
     'Go to linkedin.com',
     'Email 22nlongn@gmail.com',
     'Go to github.com',
 ];
 
-const contactNames: string[] = ['LinkedIn', 'Email', 'GitHub'];
+const contactNames = ['LinkedIn', 'Email', 'GitHub'];
 </script>
 
 <style lang="scss" scoped>

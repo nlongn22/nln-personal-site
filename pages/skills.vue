@@ -55,21 +55,20 @@ const experiences: IExperience[] = [
     },
 ];
 
-const languages: string[] = ['Czech', 'English', 'German', 'Vietnamese'];
+const languages = ['Czech', 'English', 'German', 'Vietnamese'];
 
-const technologies: string[] =
-    [
-        'Nuxt.js',
-        'Vue.js',
-        'Javascript + Typescript',
-        'HTML 5',
-        'CSS + SASS',
-        'GSAP',
-        'GIT',
-        'REST API',
-        'GraphQL',
-        'DatoCMS',
-    ];
+const technologies = [
+    'Nuxt.js',
+    'Vue.js',
+    'Javascript + Typescript',
+    'HTML 5',
+    'CSS + SASS',
+    'GSAP',
+    'GIT',
+    'REST API',
+    'GraphQL',
+    'DatoCMS',
+];
 </script>
 
 <style lang="scss" scoped>

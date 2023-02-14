@@ -1,41 +1,65 @@
 <template>
     <nav class="navbar">
-        <section>
-            <NuxtLink to="/" class="navbar__link border-bottom">
-                Home
+        <section class="navbar__links">
+            <NuxtLink
+                v-for="(link, linkIndex) in links"
+                :key="linkIndex"
+                :to="link.path"
+                class="navbar__link border-bottom"
+            >
+                {{ link.name }}
             </NuxtLink>
         </section>
 
-        <section class="navbar__right">
-            <NuxtLink to="/skills" class="navbar__link border-bottom">
-                Skills
-            </NuxtLink>
-            <NuxtLink to="/projects" class="navbar__link border-bottom">
-                Projects
-            </NuxtLink>
-            <span
+        <section>
+            <Icon
+                :key="iconKey"
+                :name="colorMode.preference"
                 class="navbar__theme-switcher"
                 @click="changeTheme"
-            >
-                {{ colorMode.preference }}
-            </span>
+            />
         </section>
     </nav>
 </template>
 
 <script setup lang="ts">
+export interface ILinks {
+    path: string;
+    name: string;
+}
+
+const links: ILinks[] = [
+    {
+        path: '/',
+        name: 'Home',
+    },
+    {
+        path: '/skills',
+        name: 'Skills',
+    },
+    {
+        path: '/projects',
+        name: 'Projects',
+    },
+];
 const colorMode = useColorMode();
 const themes = ['system', 'dark', 'light'];
-
+const iconKey = ref(0);
 let index: number = 0;
 
+function rerenderIcon(): void {
+    iconKey.value++;
+}
+
 function changeTheme(): void {
+    rerenderIcon();
+
     index === 2 ? index = 0 : index++;
     colorMode.preference = themes[index];
 
     setTimeout(() => {
         changeMetaTheme();
-    }, 5);
+    }, 1);
 }
 
 function changeMetaTheme(): void {
@@ -50,6 +74,7 @@ function listenToThemeChange(): void {
 }
 
 onMounted(() => {
+    rerenderIcon();
     listenToThemeChange();
     changeMetaTheme();
 });
@@ -58,44 +83,31 @@ onMounted(() => {
 <style lang="scss" scoped>
 .navbar {
     display: flex;
+    justify-content: space-between;
+    column-gap: $space-2;
     margin-block-end: $space-7;
 }
 
-.navbar__right {
+.navbar__links {
     display: flex;
     align-items: center;
     column-gap: $space-2;
-    margin-left: $space-2;
 }
 
 .navbar__theme-switcher {
-    margin-top: r(-6.5px);
-    font-weight: $font-weight-medium;
     cursor: pointer;
+    margin-block-start: r(2.5px);
+    font-size: r(22px);
     transition: color $transition-duration-default;
 
     @include has-hover {
         color: $color-primary-regular;
     }
-
-    &::first-letter {
-        text-transform: capitalize;
-    }
 }
 
-.dark-mode body {
-
-    .navbar__theme-switcher {
-        @include has-hover {
-            color: $color-primary-darker;
-        }
-    }
-}
-
-@include breakpoint(r(700)) {
-
-    .navbar {
-        justify-content: space-between;
+.dark-mode .navbar__theme-switcher {
+    @include has-hover {
+        color: $color-primary-darker;
     }
 }
 </style>

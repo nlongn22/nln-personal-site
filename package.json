@@ -19,7 +19,8 @@
     "sass-loader": "^13.2.0",
     "stylelint": "^15.1.0",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-stylelint": "^4.2.0"
+    "vite-plugin-stylelint": "^4.2.0",
+    "vite-svg-loader": "^4.0.0"
   },
   "dependencies": {
     "@funken-studio/sitemap-nuxt-3": "^4.0.4",

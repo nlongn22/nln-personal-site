@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import eslintPlugin from 'vite-plugin-eslint';
 import stylelintPlugin from 'vite-plugin-stylelint';
+import svgLoader from 'vite-svg-loader';
 
 export default defineNuxtConfig({
     app: {
@@ -68,6 +69,7 @@ export default defineNuxtConfig({
         plugins: [
             eslintPlugin(),
             stylelintPlugin(),
+            svgLoader(),
         ],
         css: {
             preprocessorOptions: {
