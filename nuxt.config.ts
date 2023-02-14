@@ -59,7 +59,6 @@ export default defineNuxtConfig({
                 { rel: 'manifest', href: 'favicons/site.webmanifest' },
             ],
         },
-        pageTransition: { name: 'page', mode: 'out-in' },
     },
     css: [
         '@/assets/styles/common/index.scss',

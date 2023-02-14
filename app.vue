@@ -1,7 +1,11 @@
 <template>
     <div class="container">
         <Navbar />
-        <NuxtPage />
+        <Transition name="page" mode="out-in">
+            <div :key="$route.fullPath">
+                <NuxtPage />
+            </div>
+        </Transition>
         <Footer />
     </div>
 </template>
