@@ -1,18 +1,6 @@
 <template>
     <nav class="navbar">
         <section class="navbar__links">
-            <NuxtLink to="/" class="navbar__link border-bottom">
-                Home
-            </NuxtLink>
-            <NuxtLink to="/skills" class="navbar__link border-bottom">
-                Skills
-            </NuxtLink>
-            <NuxtLink to="/projects" class="navbar__link border-bottom">
-                Projects
-            </NuxtLink>
-            <!--
-            For some reason, this will set the theme-color meta to default color (#fbfbdb),
-            when switching between pages. For now, do not use for loop.
             <NuxtLink
                 v-for="(link, linkIndex) in links"
                 :key="linkIndex"
@@ -21,7 +9,6 @@
             >
                 {{ link.name }}
             </NuxtLink>
-            -->
         </section>
 
         <section>
@@ -36,25 +23,25 @@
 </template>
 
 <script setup lang="ts">
-//  export interface ILinks {
-//      path: string;
-//      name: string;
-//  }
+export interface ILinks {
+    path: string;
+    name: string;
+}
 
-//  const links: ILinks[] = [
-//      {
-//          path: '/',
-//          name: 'Home',
-//      },
-//      {
-//          path: '/skills',
-//          name: 'Skills',
-//      },
-//      {
-//          path: '/projects',
-//          name: 'Projects',
-//      },
-//  ];
+const links: ILinks[] = [
+    {
+        path: '/',
+        name: 'Home',
+    },
+    {
+        path: '/skills',
+        name: 'Skills',
+    },
+    {
+        path: '/projects',
+        name: 'Projects',
+    },
+];
 const colorMode = useColorMode();
 const themes = ['system', 'dark', 'light'];
 const iconKey = ref(0);
