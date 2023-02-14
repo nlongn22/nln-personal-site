@@ -96,8 +96,8 @@ onMounted(() => {
 
 .navbar__theme-switcher {
     cursor: pointer;
-    margin-block-start: r(2.5px);
-    font-size: r(22px);
+    margin-block-start: r(2.5);
+    font-size: r(22);
     transition: color $transition-duration-default;
 
     @include has-hover {
