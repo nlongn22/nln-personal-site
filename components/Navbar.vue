@@ -15,14 +15,12 @@
             </NuxtLink>
         </section>
 
-        <section>
-            <Icon
-                :key="iconKey"
-                :name="colorMode.preference"
-                class="navbar__theme-switcher"
-                @click="changeTheme"
-            />
-        </section>
+        <Icon
+            :key="iconKey"
+            :name="colorMode.preference"
+            class="navbar__theme-switcher"
+            @click="changeTheme"
+        />
     </nav>
 </template>
 
@@ -76,6 +74,7 @@ onMounted((): void => {
     display: flex;
     justify-content: space-between;
     column-gap: $space-2;
+    align-items: center;
     margin-block-end: $space-7;
 }
 
@@ -87,7 +86,7 @@ onMounted((): void => {
 
 .navbar__theme-switcher {
     cursor: pointer;
-    margin-block-start: r(2.5);
+    margin-block-end: r(6);
     font-size: r(22);
     transition: color $transition-duration-default;
 
