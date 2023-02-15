@@ -1,6 +1,6 @@
 .page-enter-active,
 .page-leave-active {
-    transition: all $transition-duration-default;
+    transition: all $transition-duration-slow;
 }
 
 .page-enter-from,

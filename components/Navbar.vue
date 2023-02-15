@@ -5,9 +5,11 @@
                 v-for="(link, linkIndex) in links"
                 :key="linkIndex"
                 :to="link.path"
-                class="navbar__link border-bottom"
             >
-                {{ link.name }}
+                <div class="border-bottom">
+                    {{ link.name }}
+                    <span class="border-bottom__dot" />
+                </div>
             </NuxtLink>
         </section>
 

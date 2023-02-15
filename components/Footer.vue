@@ -1,15 +1,17 @@
 <template>
     <footer class="footer">
-        <section>
+        <section class="footer__links">
             <a
                 v-for="(link, index) in contactLinks"
                 :key="link"
                 :href="contactLinks[index]"
                 :title="contactTitles[index]"
                 target="_blank"
-                class="footer__contact border-bottom"
             >
-                {{ contactNames[index] }} &#8250;
+                <div class="border-bottom">
+                    {{ contactNames[index] }} &#8250;
+                    <span class="border-bottom__dot" />
+                </div>
             </a>
         </section>
     </footer>
@@ -36,10 +38,9 @@ const contactNames = ['LinkedIn', 'Email', 'GitHub'];
     margin-block-start: $space-7;
 }
 
-.footer__contact {
-
-    &:nth-child(2) {
-        margin-inline: $space-2;
-    }
+.footer__links {
+    display: flex;
+    align-items: center;
+    column-gap: $space-2;
 }
 </style>
