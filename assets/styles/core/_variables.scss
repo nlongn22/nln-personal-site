@@ -5,11 +5,13 @@ $color-gray-100: #393e46;
 $color-gray-200: #232931;
 $color-green-000: #78b7bb;
 $color-green-100: #4ecca3;
-$color-yellow: #fff1c1;
+$color-yellow-000: #fff1c1;
+$color-yellow-100: #a98849;
 
 $color-primary-regular: $color-green-000;
 $color-primary-darker: $color-green-100;
-$color-secondary: $color-yellow;
+$color-secondary-regular: $color-yellow-000;
+$color-secondary-darker: $color-yellow-100;
 $color-background: $color-white-000;
 $color-background-inverted: $color-gray-200;
 $color-foreground: $color-gray-000;
