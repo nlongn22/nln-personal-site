@@ -1,5 +1,7 @@
 <template>
     <nav class="navbar">
+        <Meta name="theme-color" :content="getCurrentTheme()" />
+
         <section class="navbar__links">
             <NuxtLink
                 v-for="(link, linkIndex) in links"
@@ -48,8 +50,12 @@ const colorMode = useColorMode();
 const themes = ['system', 'dark', 'light'];
 const iconKey = ref(0);
 
-function rerenderComponent(): void {
+function rerenderIcon(): void {
     iconKey.value++;
+}
+
+function getCurrentTheme(): string {
+    return colorMode.value === 'dark' ? '#232931' : '#fbfbfb';
 }
 
 function changeTheme(): void {
@@ -57,28 +63,11 @@ function changeTheme(): void {
     currentThemeIndex === 2 ? currentThemeIndex = 0 : currentThemeIndex++;
     colorMode.preference = themes[currentThemeIndex];
 
-    rerenderComponent();
-
-    setTimeout(() => {
-        changeMetaTheme();
-    }, 1);
+    rerenderIcon();
 }
 
-function changeMetaTheme(): void {
-    const themeColor = document.documentElement.className === 'dark-mode' ? '#232931' : '#fbfbfb';
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', themeColor);
-}
-
-function listenToThemeChange(): void {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        changeMetaTheme();
-    });
-}
-
-onMounted(() => {
-    rerenderComponent();
-    changeMetaTheme();
-    listenToThemeChange();
+onMounted((): void => {
+    rerenderIcon();
 });
 </script>
 
