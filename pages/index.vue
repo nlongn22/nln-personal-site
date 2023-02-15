@@ -12,7 +12,8 @@
 
         <section>
             <h1 class="message__header">
-                Welcome &#128075;
+                Welcome
+                <span class="message__header-wave" />
             </h1>
         </section>
 
@@ -57,6 +58,20 @@ useHead({
     margin-block-end: $space-5;
     font-size: r(36);
     font-weight: $font-weight-bold;
+}
+
+.message__header-wave {
+    display: inline-block;
+    transform-origin: 75% 75%;
+    animation: wave $transition-duration-very-slow 0.75s;
+}
+
+.message__header-wave:hover {
+    animation-play-state: running;
+}
+
+.message__header-wave:before {
+    content: '👋';
 }
 
 @include breakpoint(r(700)) {
