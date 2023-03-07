@@ -1,7 +1,8 @@
 module.exports = {
-    extends: ['@nuxt/eslint-config'],
+    extends: ['@nuxtjs/eslint-config-typescript'],
     rules: {
         semi: ['error', 'always'],
+        quotes: ['error', 'single'],
         indent: ['error', 4],
         'comma-dangle': ['error', 'always-multiline'],
         'space-before-function-paren': ['error', 'never'],
