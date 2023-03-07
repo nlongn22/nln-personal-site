@@ -63,6 +63,10 @@ body {
     transition: all $transition-duration-slow;
 }
 
+::selection {
+    background-color: $color-secondary-regular;
+}
+
 .dark-mode body {
     background-color: $color-background-inverted;
     color: $color-foreground-inverted;
@@ -147,10 +151,6 @@ time {
 hr {
     border: 0;
     border-block-end: $border-width-thin solid $color-border-regular;
-}
-
-::selection {
-    background-color: $color-secondary-regular;
 }
 
 #app {

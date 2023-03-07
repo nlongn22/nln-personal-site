@@ -70,7 +70,7 @@ useHead({
     animation-play-state: running;
 }
 
-.message__header-wave:before {
+.message__header-wave::before {
     content: '👋';
 }
 
