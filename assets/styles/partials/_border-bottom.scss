@@ -17,7 +17,7 @@
     block-size: r(6);
     display: inline-block;
     border-radius: $border-radius-full;
-    background-color: $color-border-primary-regular;
+    background-color: $color-border-regular;
     transition: inline-size $transition-duration-fast;
 }
 
@@ -29,5 +29,5 @@
 }
 
 .dark-mode .border-bottom__dot {
-    background-color: $color-border-primary-darker;
+    background-color: $color-border-darker;
 }

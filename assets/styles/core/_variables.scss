@@ -67,11 +67,11 @@ $color-background-inverted: $color-gray-200;
 $color-foreground: $color-gray-000;
 $color-foreground-inverted: $color-white-100;
 
-$color-border-primary-regular: $color-green-000;
-$color-border-primary-darker: $color-green-100;
+$color-border-regular: $color-green-000;
+$color-border-darker: $color-green-100;
 
-$border-primary-regular: $border-width-thin solid $color-border-primary-regular;
-$border-primary-darker: $border-width-thin solid $color-border-primary-darker;
+$border-primary-regular: $border-width-thin solid $color-border-regular;
+$border-primary-darker: $border-width-thin solid $color-border-darker;
 
 $transition-duration-fast: 0.2s;
 $transition-duration-medium: 0.4s;
