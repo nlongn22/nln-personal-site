@@ -42,7 +42,7 @@ useHead({
 
 <style lang="scss" scoped>
 .person__wrapper {
-    margin-block-end: $space-4;
+    margin-block-end: $space-8;
 }
 
 .person__name {
@@ -55,8 +55,8 @@ useHead({
 }
 
 .message__header {
-    margin-block-end: $space-5;
-    font-size: r(36);
+    margin-block-end: $space-10;
+    font-size: $space-9;
     font-weight: $font-weight-bold;
 }
 
@@ -77,7 +77,7 @@ useHead({
 @include breakpoint(r(700)) {
 
     .message__header {
-        font-size: r(48);
+        font-size: $space-12;
     }
 }
 </style>

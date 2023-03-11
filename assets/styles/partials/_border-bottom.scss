@@ -16,9 +16,9 @@
     inline-size: 0;
     block-size: r(6);
     display: inline-block;
-    border-radius: $border-radius-xl;
-    background-color: $color-border-regular;
-    transition: inline-size $transition-duration-default;
+    border-radius: $border-radius-full;
+    background-color: $color-border-primary-regular;
+    transition: inline-size $transition-duration-fast;
 }
 
 .router-link-exact-active {
@@ -29,5 +29,5 @@
 }
 
 .dark-mode .border-bottom__dot {
-    background-color: $color-border-darker;
+    background-color: $color-border-primary-darker;
 }

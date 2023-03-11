@@ -75,11 +75,11 @@ const technologies = [
 .skills__page {
     display: flex;
     flex-direction: column;
-    row-gap: $space-4;
+    row-gap: $space-8;
 }
 
 .skills__title {
-    margin-bottom: $space-1;
+    margin-bottom: $space-2;
 }
 
 .skills__company-duration {

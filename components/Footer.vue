@@ -35,12 +35,12 @@ const contactNames = ['LinkedIn', 'Email', 'GitHub'];
 
 <style lang="scss" scoped>
 .footer {
-    margin-block-start: $space-7;
+    margin-block-start: $space-14;
 }
 
 .footer__links {
     display: flex;
     align-items: center;
-    column-gap: $space-2;
+    column-gap: $space-4;
 }
 </style>

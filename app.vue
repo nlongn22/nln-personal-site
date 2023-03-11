@@ -17,7 +17,7 @@
     inline-size: 100%;
     max-inline-size: $global-max-width;
     margin-inline: auto;
-    padding-block: $space-4;
+    padding-block: $space-8;
 }
 
 @include breakpoint(r(700)) {

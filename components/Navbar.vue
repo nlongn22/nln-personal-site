@@ -73,22 +73,22 @@ onMounted((): void => {
 .navbar {
     display: flex;
     justify-content: space-between;
-    column-gap: $space-2;
+    column-gap: $space-4;
     align-items: center;
-    margin-block-end: $space-7;
+    margin-block-end: $space-14;
 }
 
 .navbar__links {
     display: flex;
     align-items: center;
-    column-gap: $space-2;
+    column-gap: $space-4;
 }
 
 .navbar__theme-switcher {
     cursor: pointer;
     margin-block-end: r(6);
     font-size: r(22);
-    transition: color $transition-duration-default;
+    transition: color $transition-duration-fast;
 
     @include has-hover {
         color: $color-primary-regular;
