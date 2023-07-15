@@ -62,23 +62,6 @@ export default defineNuxtConfig({
         '@/assets/styles/common/index.scss',
         '@/assets/styles/partials/index.scss',
     ],
-    vite: {
-        plugins: [
-            svgLoader(),
-        ],
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: '@use "@/assets/styles/core/index.scss" as *;',
-                },
-            },
-        },
-    },
-    modules: [
-        'nuxt-font-loader',
-        'nuxt-simple-sitemap',
-        '@nuxtjs/color-mode',
-    ],
     fontLoader: {
         local: [
             {
@@ -107,5 +90,25 @@ export default defineNuxtConfig({
                 weight: '700',
             },
         ],
+    },
+    modules: [
+        'nuxt-font-loader',
+        'nuxt-simple-sitemap',
+        '@nuxtjs/color-mode',
+    ],
+    site: {
+        url: 'https://nln.fyi',
+    },
+    vite: {
+        plugins: [
+            svgLoader(),
+        ],
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: '@use "@/assets/styles/core/index.scss" as *;',
+                },
+            },
+        },
     },
 });
