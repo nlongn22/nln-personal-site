@@ -1,6 +1,9 @@
 <template>
     <nav class="navbar">
-        <Meta name="theme-color" :content="getCurrentTheme()" />
+        <Meta
+            name="theme-color"
+            :content="currentTheme()"
+        />
 
         <section class="navbar__links">
             <NuxtLink
@@ -25,12 +28,14 @@
 </template>
 
 <script setup lang="ts">
-export interface ILinks {
+const colorMode = useColorMode();
+
+interface Links {
     path: string;
     name: string;
 }
 
-const links: ILinks[] = [
+const links: Links[] = [
     {
         path: '/',
         name: 'Home',
@@ -44,15 +49,15 @@ const links: ILinks[] = [
         name: 'Projects',
     },
 ];
-const colorMode = useColorMode();
 const themes = ['system', 'dark', 'light'];
+
 const iconKey = ref(0);
 
 function rerenderIcon(): void {
     iconKey.value++;
 }
 
-function getCurrentTheme(): string {
+function currentTheme(): string {
     return colorMode.value === 'dark' ? '#232931' : '#fbfbfb';
 }
 

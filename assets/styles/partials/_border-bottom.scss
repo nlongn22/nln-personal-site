@@ -5,7 +5,6 @@
     font-weight: $font-weight-medium;
 
     @include has-hover {
-
         .border-bottom__dot {
             inline-size: 100%;
         }
@@ -21,11 +20,8 @@
     transition: inline-size $transition-duration-fast;
 }
 
-.router-link-exact-active {
-
-    .border-bottom__dot {
-        inline-size: r(6);
-    }
+.router-link-exact-active .border-bottom__dot {
+    inline-size: r(6);
 }
 
 .dark-mode .border-bottom__dot {

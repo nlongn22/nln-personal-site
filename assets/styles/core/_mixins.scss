@@ -38,7 +38,6 @@
 
 @mixin has-hover {
     @media (hover: hover) and (pointer: fine) {
-
         &:not([disabled]):hover {
             @content;
         }

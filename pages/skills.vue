@@ -5,7 +5,10 @@
                 Work experience
             </h1>
             <ul>
-                <li v-for="(experience, index) in experiences" :key="index">
+                <li
+                    v-for="(experience, index) in experiences"
+                    :key="index"
+                >
                     {{ experience.company }}
                     <span class="skills__company-duration">
                         ({{ experience.duration }})
@@ -19,7 +22,10 @@
                 Technologies
             </h2>
             <ul>
-                <li v-for="(technology, index) in technologies" :key="index">
+                <li
+                    v-for="(technology, index) in technologies"
+                    :key="index"
+                >
                     {{ technology }}
                 </li>
             </ul>
@@ -30,7 +36,10 @@
                 Languages
             </h2>
             <ul>
-                <li v-for="(language, index) in languages" :key="index">
+                <li
+                    v-for="(language, index) in languages"
+                    :key="index"
+                >
                     {{ language }}
                 </li>
             </ul>
@@ -43,20 +52,18 @@ useHead({
     title: 'Ngoc Long Nguyen | Skills',
 });
 
-export interface IExperience {
+interface Experience {
     company: string;
     duration: string;
 }
 
-const experiences: IExperience[] = [
+const experiences: Experience[] = [
     {
         company: 'Apploud Digital',
         duration: 'January 2022 - August 2022',
     },
 ];
-
 const languages = ['Czech', 'English', 'German', 'Vietnamese'];
-
 const technologies = [
     'Nuxt.js',
     'Vue.js',
@@ -79,7 +86,7 @@ const technologies = [
 }
 
 .skills__title {
-    margin-bottom: $space-2;
+    margin-block-end: $space-2;
 }
 
 .skills__company-duration {

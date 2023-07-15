@@ -23,24 +23,27 @@ const contactLinks = [
     'mailto:22nlongn@gmail.com',
     'https://github.com/nlongn22',
 ];
-
 const contactTitles = [
     'Go to linkedin.com',
     'Email 22nlongn@gmail.com',
     'Go to github.com',
 ];
-
 const contactNames = ['LinkedIn', 'Email', 'GitHub'];
 </script>
 
 <style lang="scss" scoped>
 .footer {
-    margin-block-start: $space-14;
+    margin-block-start: auto;
 }
 
 .footer__links {
     display: flex;
     align-items: center;
     column-gap: $space-4;
+}
+@include breakpoint(small) {
+    .footer {
+        margin-block-start: 0;
+    }
 }
 </style>

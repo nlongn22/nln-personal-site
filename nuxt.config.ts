@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import eslintPlugin from 'vite-plugin-eslint';
-import stylelintPlugin from 'vite-plugin-stylelint';
 import svgLoader from 'vite-svg-loader';
 
 export default defineNuxtConfig({
@@ -66,8 +64,6 @@ export default defineNuxtConfig({
     ],
     vite: {
         plugins: [
-            eslintPlugin(),
-            stylelintPlugin(),
             svgLoader(),
         ],
         css: {
@@ -80,8 +76,8 @@ export default defineNuxtConfig({
     },
     modules: [
         'nuxt-font-loader',
+        'nuxt-simple-sitemap',
         '@nuxtjs/color-mode',
-        '@funken-studio/sitemap-nuxt-3',
     ],
     fontLoader: {
         local: [

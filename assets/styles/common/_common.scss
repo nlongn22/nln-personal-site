@@ -59,7 +59,7 @@ body {
     padding: 0;
     margin: 0;
     inline-size: 100%;
-    block-size: auto;
+    block-size: 100%;
     transition: all $transition-duration-medium;
 }
 
@@ -154,7 +154,7 @@ hr {
     border-block-end: $border-width-thin solid $color-border-regular;
 }
 
-#app {
+#__nuxt {
     position: relative;
     inline-size: 100%;
     block-size: 100%;

@@ -75,7 +75,6 @@ useHead({
 }
 
 @include breakpoint(r(700)) {
-
     .message__header {
         font-size: $space-12;
     }
