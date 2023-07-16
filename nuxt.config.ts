@@ -13,25 +13,61 @@ export default defineNuxtConfig({
                     content: 'width=device-width, initial-scale=1',
                 },
                 {
+                    name: 'format-detection',
+                    content: 'telephone=no',
+                },
+                {
                     name: 'description',
                     content: 'Personal site by Ngoc Long Nguyen',
                 },
-                { name: 'format-detection', content: 'telephone=no' },
-                { name: 'author', content: 'Ngoc Long Nguyen' },
-                { hid: 'og-site_name', property: 'og:site_name', content: 'nln' },
+                {
+                    name: 'author',
+                    content: 'Ngoc Long Nguyen',
+                },
+                {
+                    hid: 'og-site_name',
+                    property: 'og:site_name',
+                    content: 'nln',
+                },
                 {
                     hid: 'og-title',
                     property: 'og:title',
                     content: 'Ngoc Long Nguyen',
                 },
-                { hid: 'og-image', property: 'og:image', content: '/og/og.png' },
-                { property: 'og:image:type', content: 'image/png' },
-                { hid: 'default-theme-color', name: 'theme-color', content: '#fbfbfb' },
+                {
+                    hid: 'og-description',
+                    property: 'og:description',
+                    content: 'Personal site by Ngoc Long Nguyen',
+                },
+                {
+                    hid: 'og-image',
+                    property: 'og:image',
+                    content: '/og/og.png',
+                },
+                {
+                    property: 'og:image:type',
+                    content: 'image/png',
+                },
+                {
+                    hid: 'default-theme-color',
+                    name: 'theme-color', content: '#fbfbfb',
+                },
             ],
             link: [
-                { rel: 'icon', type: 'image/x-icon', href: 'favicons/favicon.ico' },
-                { rel: 'icon', href: 'favicons/favicon.ico', sizes: 'any' },
-                { rel: 'shortcut icon', href: 'favicons/favicon.ico' },
+                {
+                    rel: 'icon',
+                    type: 'image/x-icon',
+                    href: 'favicons/favicon.ico',
+                },
+                {
+                    rel: 'icon',
+                    href: 'favicons/favicon.ico',
+                    sizes: 'any',
+                },
+                {
+                    rel: 'shortcut icon',
+                    href: 'favicons/favicon.ico',
+                },
                 {
                     rel: 'apple-touch-icon',
                     href: 'favicons/apple-touch-icon.png',
@@ -54,7 +90,10 @@ export default defineNuxtConfig({
                     href: 'favicons/safari-pinned-tab.svg',
                     color: '#5bbad5',
                 },
-                { rel: 'manifest', href: 'favicons/site.webmanifest' },
+                {
+                    rel: 'manifest',
+                    href: 'favicons/site.webmanifest',
+                },
             ],
         },
     },
