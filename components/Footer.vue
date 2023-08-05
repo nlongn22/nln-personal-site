@@ -20,7 +20,7 @@
 <script setup lang="ts">
 const contactLinks = [
     'https://linkedin.com/in/ngoc-long-nguyen',
-    'mailto:22nlongn@gmail.com',
+    'mailto:ngoc.long.nguyen.work@gmail.com',
     'https://github.com/nlongn22',
 ];
 const contactTitles = [
@@ -41,6 +41,7 @@ const contactNames = ['LinkedIn', 'Email', 'GitHub'];
     align-items: center;
     column-gap: $space-4;
 }
+
 @include breakpoint(small) {
     .footer {
         margin-block-start: 0;
