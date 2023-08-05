@@ -55,44 +55,36 @@ export default defineNuxtConfig({
             ],
             link: [
                 {
-                    rel: 'icon',
-                    type: 'image/x-icon',
-                    href: 'favicons/favicon.ico',
-                },
-                {
-                    rel: 'icon',
-                    href: 'favicons/favicon.ico',
-                    sizes: 'any',
-                },
-                {
-                    rel: 'shortcut icon',
-                    href: 'favicons/favicon.ico',
-                },
-                {
                     rel: 'apple-touch-icon',
-                    href: 'favicons/apple-touch-icon.png',
                     sizes: '180x180',
+                    href: '/favicons/apple-touch-icon.png',
                 },
                 {
                     rel: 'icon',
-                    href: 'favicons/favicon-32x32.png',
+                    type: 'image/png',
+                    sizes: '96x96',
+                    href: '/favicons/favicon-96x96.png',
+                },
+                {
+                    rel: 'icon',
+                    type: 'image/png',
                     sizes: '32x32',
-                    type: 'image/png',
+                    href: '/favicons/favicon-32x32.png',
                 },
                 {
                     rel: 'icon',
-                    href: 'favicons/favicon-16x16.png',
-                    sizes: '16x16',
                     type: 'image/png',
+                    sizes: '16x16',
+                    href: '/favicons/favicon-16x16.png',
                 },
                 {
                     rel: 'mask-icon',
-                    href: 'favicons/safari-pinned-tab.svg',
+                    href: '/favicons/safari-pinned-tab.svg',
                     color: '#5bbad5',
                 },
                 {
                     rel: 'manifest',
-                    href: 'favicons/site.webmanifest',
+                    href: '/favicons/site.webmanifest',
                 },
             ],
         },
