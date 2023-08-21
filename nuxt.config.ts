@@ -61,6 +61,16 @@ export default defineNuxtConfig({
                 },
                 {
                     rel: 'icon',
+                    type: 'image/x-icon',
+                    href: '/favicons/favicon.ico',
+                },
+                {
+                    rel: 'shortcut icon',
+                    type: 'image/x-icon',
+                    href: '/favicons/favicon.ico',
+                },
+                {
+                    rel: 'icon',
                     type: 'image/png',
                     sizes: '96x96',
                     href: '/favicons/favicon-96x96.png',
