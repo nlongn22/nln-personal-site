@@ -19,16 +19,12 @@
 
         <section>
             <p class="font-regular">
-                My name is Ngoc Long Nguyen but most people call me Filip. I'm a
-                21 year old frontend developer who currently lives in
+                I'm a 21 year old frontend developer who currently lives in
                 <s>Munich</s> Berlin, Germany. At the moment I'm studying
                 computer science at the Technical University of Berlin.
                 <br>
                 <br>
-                In my free time (when I'm not learning anything) I like to watch
-                TV shows or hang out with my friends. I'm quite a big fan of
-                Formula 1 so every weekend is spent watching races and following
-                news. To stay in shape I try to run every other day.
+                Feel free to contact me via links provided below.
             </p>
         </section>
     </main>
